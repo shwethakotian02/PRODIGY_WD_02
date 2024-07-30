@@ -1,0 +1,143 @@
+*{
+padding:0;
+margin:0;
+box-sizing: border-box;
+outline: none;
+
+}
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    width:100px;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40rem;
+    
+   
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.outercircle
+{
+    height: 240px;
+    width:240px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.innercircle
+{
+    height: 260px;
+    width:260px;
+    border-radius:50%;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+.animation-bg{
+    background: linear-gradient(-45deg,#ee7752,#e73c7e,#23a6d5,#23d5ab);
+    background-size: 400% 400%;
+    animation:gradient 6s ease infinite;
+
+}
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;    
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%; 
+    }
+}
+
+
+.text{
+    color:beige;
+    font-size: 40px;
+}
+
+.btnwrapper{
+    width:250px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.button{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border:2px solid white;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: white;
+    color: black;
+}
+.laps{
+    list-style: none;
+    color: white;
+    width: 250px;
+    height: 250px;
+    overflow: auto;
+    position: relative;
+    padding : 15px;
+}
+
+.lapitem{
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    border:2px solid rgb(188, 160, 160);
+    border-radius: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+.laps::-webkit-scrollbar{
+    display: none;
+}
+.number{
+    color:aliceblue;
+}
+.timestamp{
+    display:inline-block;
+    margin-left: 25px;
+}
+.laps-btnclear{
+    display: block;
+    position:fixed;
+    z-index: 1000;
+    bottom:-100px;
+    margin-left:120px;
+    text-align: center;
+    transform: translate(-50%);
+    width:130px;
+    padding:10px 0;
+    margin-bottom: 120px;
+    border-radius: 50px;
+    background-color: rgba(237, 223, 223, 0.9);
+    border:1px solid white;  
+    color: black;
+    cursor: pointer; 
+}
+.hidden{
+    visibility: hidden;
+}
